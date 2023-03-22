@@ -4,7 +4,7 @@ command /helpop <text>:
 	cooldown message: &c Wait 5 seconds to use this command again
 	trigger:
 		if arg 1 is set:
-			send "&cWiadomość została wysłana!" to player
+			send "&cMesseage was sent!" to player
 			loop all players:
 				if loop-player has permission "helpop.receive":
 					send "" to loop-player 
