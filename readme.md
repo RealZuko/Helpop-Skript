@@ -4,7 +4,6 @@
 # Issue's
 ### If you found any bugs in my code, feel free to open a pull request
 
-# License
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
