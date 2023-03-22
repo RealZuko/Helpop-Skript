@@ -1,16 +1,14 @@
-command /helpop <text>:
-	aliases: /report
-	cooldown: 5 seconds
-	cooldown message: &c Wait 5 seconds to use this command again
-	trigger:
-		if arg 1 is set:
-			send "&cMesseage was sent!" to player
-			loop all players:
-				if loop-player has permission "helpop.receive":
-					send "" to loop-player 
-					send "&8======================" to loop-player 
-					send "&8[&cReport from:&8] &c%player% &7>> %arg 1%" to loop-player 
-					send "&8======================" to loop-player 
-					send "" to loop-player 
-		else:
-			send "&cUżyj: /helpop tresc" to player
+command /helpop [<text>]:
+    trigger:
+    #this one line of code was breaking the HelpOP no arg-1 messeage, and HazeHenry fixed that with these 2 lines of skript lmfao thxs
+        if arg-1 is not set:
+            send "&cPlease define what you need help in!"
+        else:
+            send "&cMesseage was sent!" to player
+            loop all players:
+                if loop-player has permission "helpop.receive":
+                    send "" to loop-player 
+                    send "&8======================" to loop-player 
+                    send "&8[&cReport from:&8] &c%player% &7>> %arg 1%" to loop-player 
+                    send "&8======================" to loop-player 
+                    send "" to loop-player 
