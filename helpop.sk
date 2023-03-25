@@ -1,4 +1,6 @@
 command /helpop [<text>]:
+    cooldown: 5 seconds
+    permission message: Please wait a moment before using this command again!
     trigger:
     #this one line of code was breaking the HelpOP no arg-1 messeage, and HazeHenry fixed that with these 2 lines of skript lmfao thxs
         if arg-1 is not set:
